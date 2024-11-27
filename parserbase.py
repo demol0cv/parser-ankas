@@ -107,7 +107,8 @@ class GoodPageParse(AnkasBase):
             async with aiohttp.ClientSession() as session:
                 if url is None:
                     url = self.url
-                proxy = "http://hpg4rsjvgw-res-country-RU-state-524894-city-524901-hold-session-session-669be64a60e1a:e8dKQi3pak4n5mAY@93.190.138.107:9999"
+                # TODO: Ставим прокси
+                proxy = ""
                 r = 0
                 while r <= 3:
                     r += 1
@@ -196,7 +197,7 @@ class CategoryParser(AnkasBase):
                 yield page_url
 
     def get_goods(self, sleep_=0.1):
-        """
+        """http://hpg4rsjvgw-res-country-RU-state-524894-city-524901-hold-session-session-669be64a60e1a:e8dKQi3pak4n5mAY@93.190.138.107:9999
 
         :param sleep_: задержка между запросами.
         :return: Возвращает генератор с двумя полями: t: str и h: str, где: t - название товара h - ссылка на страницу товара.
