@@ -1,0 +1,6 @@
+.venv
+.idea
+**__pycache__**
+debug*.zip
+*.log
+.pylintrc
